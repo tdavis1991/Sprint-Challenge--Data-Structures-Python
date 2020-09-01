@@ -65,7 +65,7 @@ class RingBuffer:
             self.length += 1
             self.storage.add_to_tail(item)
         else:
-            if self.curr is None or self.curr.next_node is None:
+            if self.curr == None or self.curr.next_node == None:
                 self.curr = self.storage.head
             else:
                 self.curr = self.storage.head.next_node
@@ -82,4 +82,12 @@ class RingBuffer:
 
 new_buffer = RingBuffer(5)
 new_buffer.append('a')
+new_buffer.append('b')
+new_buffer.append('c')
+new_buffer.append('d')
+new_buffer.append('e')
+new_buffer.append('f')
+new_buffer.append('g')
+new_buffer.append('h')
+# new_buffer.append('i')
 print(new_buffer.get())
