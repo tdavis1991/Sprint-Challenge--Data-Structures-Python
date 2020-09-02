@@ -232,6 +232,7 @@ for x in names_2:
     if cache.get(x) == x:
         duplicates.append(x)
 
+#the runtime complexity of the nested loop was O(n^2)
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
